@@ -21,6 +21,10 @@ class HDFSClient {
     fileSystem.copyFromLocalFile(deleteSrc, overwrite, local, hdfs)
   }
 
+  def downloadFile(HDFSPath: String, localPath: String): Unit = {
+    fileSystem.copyToLocalFile(new Path(HDFSPath), new Path(localPath))
+  }
+
   def close(): Unit = {
     fileSystem.close()
   }

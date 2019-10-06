@@ -1,7 +1,6 @@
 package steve.mapreduce.app.reduce
 
 import java.lang
-import java.util.function.Consumer
 import org.apache.hadoop.io.{LongWritable, Text}
 import org.apache.hadoop.mapreduce.Reducer
 
