@@ -7,7 +7,7 @@ object Main {
     val client = new HDFSClient("hdfs://localhost:8020", "steve")
 //    client.uploadFile("/home/steve/IdeaProjects/bigdata/hdfs/src/main/resources/test.txt", "/test/upload/", deleteSrc = false, overwrite = true)
     client.downloadFile("/test/upload", "/home/steve/IdeaProjects/bigdata/hdfs/src/main/resources/download")
-    
+
     client.close()
   }
 }
