@@ -31,9 +31,9 @@ class HDFSClient {
   }
 
   def getFileNameList(src: String): List[String] = {
-    val fileInfoIter = fileSystem.listFiles(new Path(src), false)
+    val fileInfoIter = fileSystem.listFiles(new Path(src), true)
     val fileNames:ListBuffer[String] = new ListBuffer[String]
-    while (fileInfoIter.hasNext) {fileNames.append(fileInfoIter.next().getPath.getName)}
+    while (fileInfoIter.hasNext) {fileNames.append(fileInfoIter.next().getPath.toString)}
     fileNames.toList
   }
 
